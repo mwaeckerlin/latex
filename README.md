@@ -16,7 +16,3 @@ This project provides a minimal, reproducible LaTeX environment in a Docker cont
 ## Example
 
 A sample document is provided in `doc/sample.tex`. On `docker compose up`, it will be compiled to `doc/sample.pdf`.
-
----
-
-**License:** LGPL-3.0 

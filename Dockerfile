@@ -5,10 +5,6 @@ RUN $PKG_INSTALL \
     texmf-dist-latexrecommended \
     texmf-dist-latexextra \
     texmf-dist-bibtexextra
-COPY tex/vorstoss.cls /usr/share/texmf-dist/tex/latex/vorstoss/
-COPY tex/logo.png /usr/share/texmf-dist/tex/latex/vorstoss/
-RUN texhash 
-#/usr/share/texmf-dist
 RUN for file in \
         /usr/bin/pdflatex \
         /usr/share/texmf-dist \
