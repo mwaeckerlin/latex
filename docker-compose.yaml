@@ -1,0 +1,8 @@
+services:
+  latex:
+    image: mwaeckerlin/latex
+    build: .
+    volumes:
+      - ./doc:/doc
+    working_dir: /doc
+    command: pdflatex -interaction=nonstopmode sample.tex

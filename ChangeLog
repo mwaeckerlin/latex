@@ -1,0 +1,7 @@
+2024-06-11  Marc Waeckerlin  <marc@example.com>
+
+	* Initial public release.
+	* Add minimal LaTeX Docker image with multi-stage build.
+	* Add security-focused, non-root runtime, no shell or package manager in final image.
+	* Add example doc/sample.tex and automatic PDF build on docker compose up.
+	* Add documentation and usage instructions in README. 

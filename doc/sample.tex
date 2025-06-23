@@ -1,0 +1,31 @@
+\documentclass{article}
+\usepackage{hyperref}
+\title{Minimal LaTeX Docker Image}
+\author{mwaeckerlin-style}
+\date{\today}
+\begin{document}
+\maketitle
+
+This project provides a minimal, reproducible LaTeX environment in a Docker container, following the philosophy of \href{https://github.com/mwaeckerlin/very-base}{mwaeckerlin/very-base}, \href{https://github.com/mwaeckerlin/nodejs}{mwaeckerlin/nodejs}, and \href{https://github.com/mwaeckerlin/nginx}{mwaeckerlin/nginx}:
+
+\begin{itemize}
+  \item \textbf{Minimalism:} Only the required binaries and files are included in the final image.
+  \item \textbf{Security:} Runs as non-root, no shell or package manager in the runtime image.
+  \item \textbf{Multi-stage builds:} Build in a larger image, copy only the output and dependencies into a minimal runtime image.
+  \item \textbf{Reproducibility:} Consistent, predictable builds and outputs.
+\end{itemize}
+
+\section*{Usage}
+\begin{enumerate}
+  \item Place your LaTeX source (e.g., \texttt{sample.tex}) in the \texttt{doc/} directory.
+  \item Run \texttt{docker compose up} to build the image and compile the LaTeX file to PDF.
+  \item The resulting \texttt{sample.pdf} will be available in the \texttt{doc/} directory.
+\end{enumerate}
+
+\section*{Example}
+A sample document is provided in \texttt{doc/sample.tex}. On \texttt{docker compose up}, it will be compiled to \texttt{doc/sample.pdf}.
+
+\vfill
+\noindent\textbf{License:} LGPL-3.0
+
+\end{document} 
